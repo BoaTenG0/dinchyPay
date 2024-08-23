@@ -1,0 +1,54 @@
+
+const [card, setCard] = useState("mastercard");
+const [open, setOpen] = useState(false);
+const [items, setItems] = useState([
+  {
+    // label: "MasterCard",
+    value: "mastercard",
+    icon: () => (
+      <Image
+        source={require("../../../assets/master.png")}
+        style={styles.cardImage}
+      />
+    ),
+  },
+  {
+    // label: "Visa Card",
+    value: "visa",
+    icon: () => (
+      <Image
+        source={require("../../../assets/visa.png")}
+        style={styles.cardImage}
+      />
+    ),
+  },
+]);
+
+
+<View
+              style={[styles.row, { paddingHorizontal: 20, marginTop: 60 }]}
+            >
+              <DropDownPicker
+                open={open}
+                value={card}
+                items={items}
+                setOpen={setOpen}
+                setValue={setCard}
+                setItems={setItems}
+                placeholder='Select'
+                containerStyle={{ width: 120 }}
+                style={styles.dropdown}
+                dropDownContainerStyle={styles.dropdownContainer}
+                listItemLabelStyle={{ color: "#fff" }}
+                listItemContainerStyle={{ backgroundColor: "#FFF" }}
+                selectedItemContainerStyle={{ backgroundColor: "#E5EDFD" }}
+                labelStyle={{ color: "#fff" }}
+              />
+              <Button
+                style={styles.button}
+                mode='contained'
+                // onPress={handleNextPress}
+              >
+                <Text style={styles.buttonText}>Available Balance</Text>
+              </Button>
+            </View>
