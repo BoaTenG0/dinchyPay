@@ -19,7 +19,7 @@ const TransactionsCard = ({ network, number, date }) => {
 const styles = StyleSheet.create({
   cardContainer: {
     flexDirection: "row",
-    width: 335,
+    width: "100%",
     height: 70,
     backgroundColor: "#fff",
     borderRadius: 10,

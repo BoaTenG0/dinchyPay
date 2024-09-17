@@ -1,4 +1,4 @@
-import { Image, StyleSheet, Text, View } from "react-native";
+import { Image, Platform, StyleSheet, Text, View } from "react-native";
 import DashboardContainer from "./DashboardContainer";
 import { useNavigation } from "@react-navigation/native";
 import { Button } from "react-native-paper";
@@ -31,7 +31,7 @@ const styles = StyleSheet.create({
     justifyContent: "space-between",
     alignItems: "center",
     paddingHorizontal: 20,
-    paddingTop: 15,
+    paddingTop: Platform.OS == "ios" ? 15 : 50,
   },
   text: {
     color: "#F8D10E",

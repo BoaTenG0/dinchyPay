@@ -34,7 +34,7 @@ const NewsCard = ({ link, saved, extra }) => {
             <Feather name='bookmark' size={18} />
           )}
         </View>
-        <Text style={[styles.description, globalStyles.proxima]}>
+        <Text style={[styles.description]}>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum
           dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit
           amet, consectetur adipiscing elit.............
@@ -82,8 +82,9 @@ const styles = StyleSheet.create({
     alignItems: "center",
   },
   textContainer: {
+    // padding: 0,
     flex: 1,
-    paddingLeft: 10,
+    paddingLeft: 5,
   },
   title: {
     fontWeight: "600",

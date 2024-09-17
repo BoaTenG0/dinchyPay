@@ -106,7 +106,6 @@ const styles = StyleSheet.create({
     marginVertical: 50,
   },
   balanceText: {
-    fontFamily: "Poppins-Regular",
     fontSize: 10,
     color: "#606570",
     lineHeight: 15,
@@ -118,7 +117,6 @@ const styles = StyleSheet.create({
     marginTop: 10,
   },
   percentageText: {
-    fontFamily: "Poppins-Regular",
     fontSize: 10,
     letterSpacing: -0.3,
     textAlign: "center",
@@ -137,7 +135,6 @@ const styles = StyleSheet.create({
     borderWidth: 1,
   },
   transactionText: {
-    fontFamily: "Poppins-Regular",
     fontSize: 12,
     color: "#606570",
     lineHeight: 18,
@@ -148,7 +145,6 @@ const styles = StyleSheet.create({
     borderRadius: 5,
   },
   amountText: {
-    fontFamily: "Poppins-Medium",
     fontSize: 12,
     lineHeight: 18,
   },

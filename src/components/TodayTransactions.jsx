@@ -111,19 +111,16 @@ const styles = StyleSheet.create({
     gap: 20,
   },
   name: {
-    fontFamily: "Poppins-Regular",
     fontSize: 12,
     color: "#000000",
     lineHeight: 18,
   },
   time: {
-    fontFamily: "Poppins-Regular",
     fontSize: 8,
     color: "#9caeb8",
     lineHeight: 12,
   },
   amount: {
-    fontFamily: "Poppins-Medium",
     fontSize: 12,
     color: "#000000",
     lineHeight: 18,

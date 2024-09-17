@@ -141,7 +141,6 @@ const styles = StyleSheet.create({
     borderRadius: 32,
   },
   buttonText: {
-    fontFamily: "Proxima Nova",
     fontSize: 14,
     color: "#FFFFFF",
     textAlign: "center",

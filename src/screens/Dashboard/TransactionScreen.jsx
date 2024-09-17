@@ -97,7 +97,7 @@ const TransactionScreen = () => {
           <View
             style={[
               styles.row,
-              { paddingHorizontal: 20, marginTop: 10, zIndex: 1000 },
+              { paddingHorizontal: 20, zIndex: 1000 },
             ]}
           >
             <Text style={styles.buttonText}>Available Balance</Text>
@@ -184,7 +184,7 @@ const styles = StyleSheet.create({
     paddingVertical: 20,
   },
   sectionMain: {
-    paddingTop: Platform.OS === "ios" ? 50 : 40,
+    paddingTop: Platform.OS === "ios" ? 50 : 50,
     borderBottomLeftRadius: 20,
     borderBottomRightRadius: 20,
   },
@@ -254,11 +254,13 @@ const styles = StyleSheet.create({
     resizeMode: "cover",
   },
   newsCard: {
+    width: "100%",
+    // paddingHorizontal: 20,
     gap: 10,
     paddingVertical: 10,
     // width: "100%",
     // flexDirection: "row",
-    // justifyContent: "center",
+    justifyContent: "center",
   },
 });
 export default TransactionScreen;

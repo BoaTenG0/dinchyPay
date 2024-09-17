@@ -124,7 +124,7 @@ Thank you!'
             </View>
           </View>
           <TouchableOpacity style={styles.button} onPress={handleNextPress}>
-            <Text style={[styles.buttonText, globalStyles.proxima]}>
+            <Text style={[styles.buttonText]}>
               Confirm
             </Text>
           </TouchableOpacity>

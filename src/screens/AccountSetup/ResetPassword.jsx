@@ -30,6 +30,26 @@ const ResetPassword = () => {
   const [showPassword, setShowPassword] = useState(false);
   const [showConfirmPassword, setShowConfirmPassword] = useState(false);
   const [visible, setVisible] = useState(false);
+  const [isKeyboardVisible, setKeyboardVisible] = useState(false);
+
+  // useEffect(() => {
+  //   const keyboardDidShowListener = Keyboard.addListener(
+  //     "keyboardDidShow",
+  //     () => {
+  //       setKeyboardVisible(true);
+  //     }
+  //   );
+  //   const keyboardDidHideListener = Keyboard.addListener(
+  //     "keyboardDidHide",
+  //     () => {
+  //       setKeyboardVisible(false);
+  //     }
+  //   );
+  //   return () => {
+  //     keyboardDidHideListener.remove();
+  //     keyboardDidShowListener.remove();
+  //   };
+  // }, []);
 
   const toggleShowPassword = () => {
     setShowPassword(!showPassword);
@@ -87,10 +107,10 @@ const ResetPassword = () => {
       <Toast ref={toastRef} onHide={handleHide} left={50} />
 
       <View style={styles.container}>
-        <Animatable.View animation='fadeInUp' duration={1000}>
+        <Animatable.View animation="fadeInUp" duration={1000}>
           <View style={styles.header}>
             <Button onPress={() => navigate("Login")}>
-              <AntDesign name='arrowleft' size={20} color='#000' />
+              <AntDesign name="arrowleft" size={20} color="#000" />
             </Button>
           </View>
           {/* <ScrollView
@@ -133,16 +153,16 @@ const ResetPassword = () => {
             <View style={styles.passwordContainer}>
               <TextInput
                 value={user.password}
-                placeholder='Please type your password here...'
+                placeholder="Please type your password here..."
                 onChangeText={(text) => handleChange("password", text)}
                 style={styles.passwordInput}
-                placeholderTextColor='grey'
+                placeholderTextColor="grey"
                 secureTextEntry={!showPassword}
               />
               <MaterialCommunityIcons
                 name={showPassword ? "eye-off" : "eye"}
                 size={24}
-                color='#aaa'
+                color="#aaa"
                 style={styles.icon}
                 onPress={toggleShowPassword}
               />
@@ -158,16 +178,16 @@ const ResetPassword = () => {
             <View style={styles.passwordContainer}>
               <TextInput
                 value={user.confirmPassword}
-                placeholder='Please confirm your password...'
+                placeholder="Please confirm your password..."
                 onChangeText={(text) => handleChange("confirmPassword", text)}
                 style={styles.passwordInput}
-                placeholderTextColor='grey'
+                placeholderTextColor="grey"
                 secureTextEntry={!showConfirmPassword}
               />
               <MaterialCommunityIcons
                 name={showConfirmPassword ? "eye-off" : "eye"}
                 size={24}
-                color='#aaa'
+                color="#aaa"
                 style={styles.icon}
                 onPress={toggleShowConfirmPassword}
               />
@@ -176,30 +196,32 @@ const ResetPassword = () => {
           {/* </ScrollView> */}
         </Animatable.View>
 
-        <View
-          style={{
-            width: "100%",
-            position: "absolute",
-            bottom: 0,
-            justifyContent: "center",
-            alignItems: "center",
-          }}
-        >
+        {/* {!isKeyboardVisible && ( */}
           <View
-            style={[
-              styles.imageContainer,
-              { width: "100%", gap: 10, marginVertical: 30 },
-            ]}
+            style={{
+              width: "100%",
+              position: "absolute",
+              bottom: 0,
+              justifyContent: "center",
+              alignItems: "center",
+            }}
           >
-            <Button
-              style={styles.button}
-              mode='contained'
-              onPress={handleNextPress}
+            <View
+              style={[
+                styles.imageContainer,
+                { width: "100%", gap: 10, marginVertical: 30 },
+              ]}
             >
-              <Text style={styles.buttonText}>Reset Password</Text>
-            </Button>
+              <Button
+                style={styles.button}
+                mode="contained"
+                onPress={handleNextPress}
+              >
+                <Text style={styles.buttonText}>Reset Password</Text>
+              </Button>
+            </View>
           </View>
-        </View>
+        {/* )} */}
       </View>
       <View style={styles.imageContainer}>
         <Portal>
@@ -238,7 +260,7 @@ const ResetPassword = () => {
               <View style={styles.buttonContainer}>
                 <Button
                   style={styles.button}
-                  mode='contained'
+                  mode="contained"
                   onPress={NextPage}
                 >
                   <Text style={styles.buttonText}>Login</Text>
@@ -308,14 +330,14 @@ const styles = StyleSheet.create({
     marginVertical: 10,
     width: "90%",
     alignSelf: "center",
-    shadowColor: "#000",
-    shadowOffset: {
-      width: 0,
-      height: 2,
-    },
-    shadowOpacity: 0.25,
-    shadowRadius: 3.84,
-    elevation: 5,
+    // shadowColor: "#000",
+    // shadowOffset: {
+    //   width: 0,
+    //   height: 2,
+    // },
+    // shadowOpacity: 0.25,
+    // shadowRadius: 3.84,
+    // elevation: 5,
   },
   passwordInput: {
     flex: 1,

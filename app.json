@@ -18,13 +18,19 @@
       "adaptiveIcon": {
         "foregroundImage": "./assets/PayMobile.png",
         "backgroundColor": "#ffffff"
-      }
+      },
+      "package": "com.kobby223.PayMobile"
     },
     "web": {
       "favicon": "./assets/PayMobile.png"
     },
     "plugins": [
       "expo-font"
-    ]
+    ],
+    "extra": {
+      "eas": {
+        "projectId": "7846b1ef-9bf3-4c4a-8f19-49a11879a7f8"
+      }
+    }
   }
 }

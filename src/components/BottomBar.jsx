@@ -11,7 +11,7 @@ const BottomBar = ({ btnText, onPress, content, extra, style }) => {
         <Text style={[styles.header, globalStyles.poppins]}>
           Welcome to Pay Mobile!
         </Text>
-        <Text style={[styles.content, globalStyles.proxima, { width: style }]}>
+        <Text style={[styles.content, { width: style }]}>
           {content}
           {extra}
         </Text>

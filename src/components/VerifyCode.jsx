@@ -83,7 +83,7 @@ const styles = StyleSheet.create({
     height: "80%",
     margin: 8,
     textAlign: "center",
-    fontSize: "20%",
+    fontSize: 20,
     borderRadius: 20,
     borderStyle: "solid",
     padding: "5%",

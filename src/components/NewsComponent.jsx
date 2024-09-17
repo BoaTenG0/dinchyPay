@@ -73,7 +73,7 @@ const NewsComponent = () => {
               </View>
               <View style={styles.top}>
                 <Text style={styles.time}>{newsData[0]?.time}</Text>
-                <Feather name='bookmark' size={18} />
+                <Feather name="bookmark" size={18} />
               </View>
             </Card>
             <ScrollView
@@ -84,7 +84,7 @@ const NewsComponent = () => {
               <Text style={styles.sectionTitle}>Latest News</Text>
 
               <View style={{ width: "100%", paddingHorizontal: 10, gap: 10 }}>
-                <NewsCard link='NewsDetail' />
+                <NewsCard link="NewsDetail" />
                 <NewsCard />
                 <NewsCard />
               </View>
@@ -92,11 +92,50 @@ const NewsComponent = () => {
           </>
         );
       case "Investments":
-        return <Text style={styles.noDataText}>Investments Content</Text>;
+        return (
+          <ScrollView
+            showsVerticalScrollIndicator={false}
+            //   style={{ marginBottom: 92000 }}
+            contentContainerStyle={{ paddingBottom: 750 }}
+          >
+            <Text style={styles.sectionTitle}>Investment</Text>
+
+            <View style={{ width: "100%", paddingHorizontal: 10, gap: 10 }}>
+              <NewsCard link="NewsDetail" />
+              <NewsCard />
+              <NewsCard />
+            </View>
+          </ScrollView>
+        );
       case "Money Tips":
-        return <Text style={styles.noDataText}>Money Tips Content</Text>;
+        return (
+          <ScrollView
+            showsVerticalScrollIndicator={false}
+            //   style={{ marginBottom: 92000 }}
+            contentContainerStyle={{ paddingBottom: 750 }}
+          >
+            <Text style={styles.sectionTitle}>Money Tips</Text>
+
+            <View style={{ width: "100%", paddingHorizontal: 10, gap: 10 }}>
+              <NewsCard link="NewsDetail" />
+              <NewsCard />
+            </View>
+          </ScrollView>
+        );
       case "Savings":
-        return <Text style={styles.noDataText}>Savings Content</Text>;
+        return (
+          <ScrollView
+            showsVerticalScrollIndicator={false}
+            //   style={{ marginBottom: 92000 }}
+            contentContainerStyle={{ paddingBottom: 750 }}
+          >
+            <Text style={styles.sectionTitle}>Savings</Text>
+
+            <View style={{ width: "100%", paddingHorizontal: 10, gap: 10 }}>
+              <NewsCard link="NewsDetail" />
+            </View>
+          </ScrollView>
+        );
       case "Saved News":
         return (
           <>
@@ -107,9 +146,9 @@ const NewsComponent = () => {
               contentContainerStyle={{ paddingBottom: 50 }}
             >
               <View style={{ width: "100%", paddingHorizontal: 10, gap: 10 }}>
-                <NewsCard link='NewsDetail' saved />
-                <NewsCard link='NewsDetail' saved />
-                <NewsCard link='NewsDetail' saved />
+                <NewsCard link="NewsDetail" saved />
+                <NewsCard link="NewsDetail" saved />
+                <NewsCard link="NewsDetail" saved />
               </View>
             </ScrollView>
           </>
@@ -126,6 +165,11 @@ const NewsComponent = () => {
           horizontal
           showsHorizontalScrollIndicator={false}
           style={styles.navBar}
+          contentContainerStyle={{
+            width: "100%",
+            justifyContent: "center",
+            alignItems: "center",
+          }}
         >
           {navItems.map((item) => (
             <TouchableOpacity key={item} onPress={() => setCurrentTab(item)}>

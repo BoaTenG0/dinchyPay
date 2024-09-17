@@ -186,13 +186,13 @@ const styles = StyleSheet.create({
     width: "90%",
     alignSelf: "center",
     shadowColor: "#000",
-    shadowOffset: {
-      width: 0,
-      height: 2,
-    },
-    shadowOpacity: 0.25,
-    shadowRadius: 3.84,
-    elevation: 5,
+    // shadowOffset: {
+    //   width: 0,
+    //   height: 2,
+    // },
+    // shadowOpacity: 0.25,
+    // shadowRadius: 3.84,
+    // elevation: 5,
   },
   label: {
     marginBottom: 5,

@@ -1,5 +1,5 @@
 import * as React from "react";
-import { ScrollView, StyleSheet, Text, View } from "react-native";
+import { Platform, ScrollView, StyleSheet, Text, View } from "react-native";
 import * as Animatable from "react-native-animatable";
 import * as Progress from "react-native-progress";
 import AppBar from "../../components/AppBar";
@@ -119,7 +119,7 @@ const WalletScreen = () => {
               justifyContent: "center",
               alignItems: "center",
               paddingHorizontal: 17,
-              marginTop: 80,
+              marginTop: Platform.OS == "ios" ? 80 : 50,
               marginBottom: 30,
             }}
           >
@@ -223,7 +223,7 @@ const styles = StyleSheet.create({
     alignItems: "center",
     gap: 25,
     position: "absolute",
-    top: "10%",
+    top: Platform.OS == "ios" ? '10%' : "13%",
     zIndex: 999,
   },
   cardComponent: {
@@ -285,7 +285,6 @@ const styles = StyleSheet.create({
     marginVertical: 50,
   },
   balanceText: {
-    fontFamily: "Poppins-Regular",
     fontSize: 10,
     color: "#606570",
     lineHeight: 15,

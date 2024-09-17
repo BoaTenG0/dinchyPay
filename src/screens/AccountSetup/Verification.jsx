@@ -54,7 +54,7 @@ const Verification = () => {
   return (
     <SafeAreaView style={styles.safeArea}>
       <StatusBar barStyle={"light-content"} />
-      <Toast ref={toastRef} onHide={handleHide} left={50} />
+      <Toast ref={toastRef} onHide={handleHide} left={Platform.OS == "ios" ? 50 : 60} />
       <TouchableWithoutFeedback onPress={Keyboard.dismiss} accessible={false}>
         <View style={styles.container}>
           <Animatable.View animation='fadeInUp' duration={1000}>

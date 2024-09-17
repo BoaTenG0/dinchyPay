@@ -112,7 +112,7 @@ const OTPCode = () => {
   return (
     <SafeAreaView style={styles.safeArea}>
       <StatusBar barStyle={"light-content"} />
-      <Toast ref={toastRef} onHide={handleHide} left={50} />
+      <Toast ref={toastRef} onHide={handleHide} left={Platform.OS == "ios" ? 50 : 80} />
       <TouchableWithoutFeedback onPress={Keyboard.dismiss} accessible={false}>
         <View style={styles.container}>
           <Animatable.View animation='fadeInUp' duration={1000}>
@@ -373,7 +373,7 @@ const styles = StyleSheet.create({
     fontWeight: "bold",
   },
   InputTitle: {
-    fontSize: "15%",
+    fontSize: 15,
     color: "#000",
     fontWeight: "bold",
     textAlign: "center",

@@ -7,6 +7,7 @@ import {
   ImageBackground,
   TouchableOpacity,
   StatusBar,
+  Platform,
 } from "react-native";
 import { useNavigation } from "@react-navigation/native";
 import React, { useEffect, useRef, useState } from "react";
@@ -50,7 +51,7 @@ const AccountSetting1 = () => {
   }
   const handleNextPress = () => {
     if (!selected) {
-      showError("Please select an option before proceeding.");
+      showError("Please select an option.");
     } else {
       showSuccess("Great Selection");
       navigate("DetailPage");
@@ -59,7 +60,8 @@ const AccountSetting1 = () => {
   return (
     <SafeAreaView style={styles.safeArea}>
       <StatusBar barStyle={"light-content"} />
-      <Toast ref={toastRef} onHide={handleHide} />
+      <Toast ref={toastRef} onHide={handleHide} left={Platform.OS == "ios" ? 30 : 50
+      } />
       <View style={styles.container}>
         <ImageBackground
           source={require("../../../assets/PayMLogo.png")}
